@@ -21,7 +21,7 @@ body {
 }
 
 .ez-body #ez-body__left-sidebar {
-  height: 91vh;
+  height: 92vh;
   padding: 0;
   background-color: white;
   overflow: scroll;
@@ -108,7 +108,7 @@ body {
 }
 
 .ez-body #ez-body__right-sidebar {
-  height: 91vh;
+  height: 92vh;
   padding: 0;
   background-color: white;
   overflow: scroll;
@@ -223,6 +223,18 @@ body {
   }
   .ez-body #ez-body__left-sidebar {
     display: none;
+  }
+  .ez-body #ez-body__center-content .stories::-webkit-scrollbar {
+    width: 1px;
+  }
+  .ez-body #ez-body__center-content .stories::-webkit-scrollbar-track {
+    background: #F0F2F5;
+  }
+  .ez-body #ez-body__center-content .stories::-webkit-scrollbar-thumb {
+    background: #F0F2F5;
+  }
+  .ez-body #ez-body__center-content .stories .story img {
+    width: 25vw;
   }
   .ez-body #ez-body__right-sidebar {
     display: none;
