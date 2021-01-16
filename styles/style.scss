@@ -77,15 +77,17 @@ body {
     }
     .stories {
       &::-webkit-scrollbar {
-        width: 1px;
+        height: 10px;
+        width: 0;
       }
       &::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f1f1f1;
       }
       &::-webkit-scrollbar-thumb {
-        background: #888; 
+        border-radius: 10px;
+        background: #888;
       }
-      
+
       overflow: scroll;
       .story {
         margin: 8px;
@@ -128,6 +130,9 @@ body {
       }
       .suggested-peoples {
         .people {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           padding: 3%;
           border-radius: 10px;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
@@ -158,6 +163,9 @@ body {
             0 1px 2px rgba(0, 0, 0, 0.24);
           transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
           .group-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             div {
               p {
                 font-size: small;
@@ -195,18 +203,18 @@ body {
       display: none;
     }
     #ez-body__center-content {
-      .stories{
+      .stories {
         &::-webkit-scrollbar {
           width: 1px;
         }
         &::-webkit-scrollbar-track {
-          background: #F0F2F5; 
+          background: #f0f2f5;
         }
         &::-webkit-scrollbar-thumb {
-          background: #F0F2F5; 
+          background: #f0f2f5;
         }
-        .story{
-          img{
+        .story {
+          img {
             width: 25vw;
           }
         }
@@ -214,6 +222,59 @@ body {
     }
     #ez-body__right-sidebar {
       display: none;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .ez-body {
+    font-size: smaller;
+    #ez-body__left-sidebar {
+      #left-sidebar__items:first-child {
+        margin-top: 15px;
+        .profile-figure {
+          width: 50px;
+          height: 50px;
+        }
+        span {
+          font-size: medium;
+        }
+      }
+    }
+    #ez-body__right-sidebar {
+      #right-sidebar__items {
+        h6 {
+          font-size: small;
+        }
+        .suggested-peoples {
+          .people {
+            display: flex;
+            flex-wrap:wrap;
+            .people-info{
+              .profile-figure{
+                margin-top: 0;
+              }
+              div{
+                p{
+                  margin-top: 1px;
+                  margin-bottom: 0px;
+                }
+              }
+            }
+            button{
+              margin: 2px auto 0 auto;
+            }
+          }
+        }
+        .suggested-groups{
+          .group{
+            .group-info{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+          }
+        }
+      }
     }
   }
 }
