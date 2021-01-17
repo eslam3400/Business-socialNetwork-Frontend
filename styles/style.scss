@@ -205,13 +205,7 @@ body {
     #ez-body__center-content {
       .stories {
         &::-webkit-scrollbar {
-          width: 1px;
-        }
-        &::-webkit-scrollbar-track {
-          background: #f0f2f5;
-        }
-        &::-webkit-scrollbar-thumb {
-          background: #f0f2f5;
+          height: 0;
         }
         .story {
           img {
@@ -237,6 +231,13 @@ body {
         }
         span {
           font-size: medium;
+        }
+      }
+    }
+    #ez-body__center-content{
+      .stories {
+        &::-webkit-scrollbar {
+          height: 8px;
         }
       }
     }

@@ -248,13 +248,7 @@ body {
     display: none;
   }
   .ez-body #ez-body__center-content .stories::-webkit-scrollbar {
-    width: 1px;
-  }
-  .ez-body #ez-body__center-content .stories::-webkit-scrollbar-track {
-    background: #f0f2f5;
-  }
-  .ez-body #ez-body__center-content .stories::-webkit-scrollbar-thumb {
-    background: #f0f2f5;
+    height: 0;
   }
   .ez-body #ez-body__center-content .stories .story img {
     width: 25vw;
@@ -277,6 +271,9 @@ body {
   }
   .ez-body #ez-body__left-sidebar #left-sidebar__items:first-child span {
     font-size: medium;
+  }
+  .ez-body #ez-body__center-content .stories::-webkit-scrollbar {
+    height: 8px;
   }
   .ez-body #ez-body__right-sidebar #right-sidebar__items h6 {
     font-size: small;
