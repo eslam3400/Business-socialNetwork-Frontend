@@ -21,11 +21,12 @@ body {
 }
 
 .ez-body #ez-body__left-sidebar {
-  height: 92vh;
+  height: 100vh;
   padding: 0;
   background-color: white;
   overflow: scroll;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
 }
 
@@ -109,12 +110,51 @@ body {
   height: 25vh;
 }
 
+.ez-body #ez-body__center-content .add-post input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  height: 6vh;
+  padding-left: 1vw;
+}
+
+.ez-body #ez-body__center-content .post-container {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .owner-img img {
+  width: 70px;
+  height: 70px;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .post-options {
+  color: #888;
+  cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .post-container .post-desc .img img {
+  width: 100%;
+}
+
+.ez-body #ez-body__center-content .post-container .post-statistics > div > i {
+  cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .profile-left .profile-pic img {
+  width: 100%;
+}
+
 .ez-body #ez-body__right-sidebar {
-  height: 92vh;
+  height: 100vh;
   padding: 0;
   background-color: white;
   overflow: scroll;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
 }
 

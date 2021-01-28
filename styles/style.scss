@@ -2,11 +2,11 @@ $yellow-bg: #fcbc22;
 $li-hover-bg-color: #f2ae2f3a;
 $li-hover-text-color: #f2ae2f;
 @mixin sidebar {
-  height: 92vh;
+  height: 100vh;
   padding: 0;
   background-color: white;
   overflow: scroll;
-  position: relative;
+  position: sticky;
   top: 0;
   ul {
     list-style: none;
@@ -95,6 +95,49 @@ body {
           border-radius: 10px;
           width: 12vw;
           height: 25vh;
+        }
+      }
+    }
+    .add-post {
+      input {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        height: 6vh;
+        padding-left: 1vw;
+      }
+    }
+    .post-container {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border-radius: 10px;
+      .post-owner {
+        .owner-img {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        .post-options {
+          color: #888;
+          cursor: pointer;
+        }
+      }
+      .post-desc {
+        .img {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .post-statistics > div > i {
+        cursor: pointer;
+      }
+    }
+    .profile-left {
+      .profile-pic {
+        img {
+          width: 100%;
         }
       }
     }
@@ -234,7 +277,7 @@ body {
         }
       }
     }
-    #ez-body__center-content{
+    #ez-body__center-content {
       .stories {
         &::-webkit-scrollbar {
           height: 8px;
@@ -249,26 +292,26 @@ body {
         .suggested-peoples {
           .people {
             display: flex;
-            flex-wrap:wrap;
-            .people-info{
-              .profile-figure{
+            flex-wrap: wrap;
+            .people-info {
+              .profile-figure {
                 margin-top: 0;
               }
-              div{
-                p{
+              div {
+                p {
                   margin-top: 1px;
                   margin-bottom: 0px;
                 }
               }
             }
-            button{
+            button {
               margin: 2px auto 0 auto;
             }
           }
         }
-        .suggested-groups{
-          .group{
-            .group-info{
+        .suggested-groups {
+          .group {
+            .group-info {
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
