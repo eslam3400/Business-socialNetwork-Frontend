@@ -56,6 +56,74 @@ body {
   font-size: larger;
 }
 
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details {
+  font-size: small;
+  padding: 0;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul {
+  width: 90%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li {
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(1) {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #f9a507;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(2) {
+  border-radius: 0;
+  background-color: #f2ae2f;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(3) {
+  border-radius: 0;
+  background-color: #ffbf00;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(4) {
+  border-radius: 0;
+  background-color: #ffb730;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(5) {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #f9da23;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(5) b {
+  font-size: smaller;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(5) .spacer {
+  color: white;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul li:nth-child(6) i {
+  padding-right: 0.75vw;
+  font-size: large;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details ul .last-li:hover {
+  background-color: white;
+}
+
+.ez-body #ez-body__left-sidebar #left-sidebar__items .more-details:hover {
+  background-color: white;
+}
+
 .ez-body #ez-body__left-sidebar #left-sidebar__items li {
   padding: 6%;
   border-radius: 10px;
@@ -72,6 +140,11 @@ body {
 
 .ez-body #ez-body__left-sidebar #left-sidebar__items li:hover a {
   color: #f2ae2f;
+}
+
+.ez-body #ez-body__center-content .profile-cover img {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .ez-body #ez-body__center-content .search-bar input {
@@ -110,12 +183,34 @@ body {
   height: 25vh;
 }
 
+.ez-body #ez-body__center-content .add-post .settings {
+  background-color: white;
+  width: 9%;
+  border-radius: 10px;
+}
+
+.ez-body #ez-body__center-content .add-post .settings p {
+  margin-bottom: 0;
+}
+
+.ez-body #ez-body__center-content .add-post .settings:hover {
+  background-color: #f2ae2f3a;
+}
+
 .ez-body #ez-body__center-content .add-post input {
-  width: 100%;
   border: none;
   border-radius: 10px;
   height: 6vh;
   padding-left: 1vw;
+}
+
+.ez-body #ez-body__center-content .add-post .model-content {
+  border-radius: 100px !important;
+}
+
+.ez-body #ez-body__center-content .section-navigator button {
+  width: 49%;
+  height: 45px;
 }
 
 .ez-body #ez-body__center-content .post-container {
@@ -126,14 +221,49 @@ body {
   border-radius: 10px;
 }
 
+.ez-body #ez-body__center-content .post-container .post-owner {
+  position: relative;
+}
+
 .ez-body #ez-body__center-content .post-container .post-owner .owner-img img {
   width: 70px;
   height: 70px;
 }
 
-.ez-body #ez-body__center-content .post-container .post-owner .post-options {
+.ez-body #ez-body__center-content .post-container .post-owner .post-option {
   color: #888;
   cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .post-options {
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+  border-radius: 10px;
+  padding: 1.5%;
+  position: absolute;
+  top: 4vh;
+  right: 1.5vw;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .post-options ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .post-options ul li {
+  padding-bottom: 2px;
+  border-bottom: 0.5px #ccc solid;
+  cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .post-container .post-owner .post-options ul .last-li {
+  border: none;
+  padding-bottom: 0;
 }
 
 .ez-body #ez-body__center-content .post-container .post-desc .img img {
@@ -144,8 +274,127 @@ body {
   cursor: pointer;
 }
 
-.ez-body #ez-body__center-content .profile-left .profile-pic img {
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment {
+  position: relative;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .owner-img img {
+  width: 50px;
+  height: 50px;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .comment-option {
+  color: #888;
+  cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .comment-options {
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+  border-radius: 10px;
+  padding: 1%;
+  position: absolute;
+  top: 1vh;
+  right: 1.5vw;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .comment-options ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .comment-options ul li {
+  cursor: pointer;
+}
+
+.ez-body #ez-body__center-content .post-container .post-comment-list .add-commnet input {
+  border-radius: 5px;
+  height: 6vh;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #e4e4e4;
   width: 100%;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+}
+
+.ez-body #ez-body__center-content .profile-left .container0 {
+  height: 100vh;
+}
+
+.ez-body #ez-body__center-content .profile-left .profile-pic img {
+  width: 60%;
+  border-radius: 10px;
+}
+
+.ez-body #ez-body__center-content .profile-left .edit-profile-pic i {
+  margin-top: -1000px;
+}
+
+.ez-body #ez-body__center-content .profile-left .user-details p {
+  margin-bottom: 5px;
+}
+
+.ez-body #ez-body__center-content .profile-left .user-details span {
+  color: #888;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul {
+  width: 80%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li {
+  padding: 5px;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(1) {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #f9a507;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(2) {
+  background-color: #f2ae2f;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(3) {
+  background-color: #ffbf00;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(4) {
+  background-color: #ffb730;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(5) {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #f9da23;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(5) .spacer {
+  color: white;
+}
+
+.ez-body #ez-body__center-content .profile-left .more-details ul li:nth-child(6) i {
+  padding-right: 8px;
+  font-size: xx-large;
+}
+
+.ez-body #ez-body__center-content .services-container .service {
+  width: 23%;
+}
+
+.ez-body #ez-body__center-content .services-container .service .card-body .card-text {
+  color: #f2ae2f;
 }
 
 .ez-body #ez-body__right-sidebar {

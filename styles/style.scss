@@ -49,6 +49,63 @@ body {
     #left-sidebar__items {
       padding: 0;
       font-size: larger;
+      .more-details {
+        font-size: small;
+        padding: 0;
+        ul {
+          width: 90%;
+          padding-left: 0;
+          list-style: none;
+          li {
+            padding: 5px;
+            padding-left: 10px;
+          }
+          li:nth-child(1) {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: #f9a507;
+          }
+          li:nth-child(2) {
+            border-radius: 0;
+            background-color: #f2ae2f;
+          }
+          li:nth-child(3) {
+            border-radius: 0;
+            background-color: #ffbf00;
+          }
+          li:nth-child(4) {
+            border-radius: 0;
+            background-color: #ffb730;
+          }
+          li:nth-child(5) {
+            b {
+              font-size: smaller;
+            }
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #f9da23;
+            .spacer {
+              color: white;
+            }
+          }
+          li:nth-child(6) {
+            i {
+              padding-right: 0.75vw;
+              font-size: large;
+            }
+          }
+          .last-li:hover {
+            background-color: white;
+          }
+        }
+      }
+      .more-details:hover {
+        background-color: white;
+      }
       li {
         padding: 6%;
         border-radius: 10px;
@@ -66,6 +123,12 @@ body {
     }
   }
   #ez-body__center-content {
+    .profile-cover {
+      img {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
     .search-bar {
       input {
         width: 100%;
@@ -99,12 +162,31 @@ body {
       }
     }
     .add-post {
+      .settings {
+        background-color: white;
+        width: 9%;
+        border-radius: 10px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+      .settings:hover {
+        background-color: $li-hover-bg-color;
+      }
       input {
-        width: 100%;
         border: none;
         border-radius: 10px;
         height: 6vh;
         padding-left: 1vw;
+      }
+      .model-content {
+        border-radius: 100px !important;
+      }
+    }
+    .section-navigator {
+      button {
+        width: 49%;
+        height: 45px;
       }
     }
     .post-container {
@@ -112,15 +194,42 @@ body {
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       border-radius: 10px;
       .post-owner {
+        position: relative;
         .owner-img {
           img {
             width: 70px;
             height: 70px;
           }
         }
-        .post-options {
+        .post-option {
           color: #888;
           cursor: pointer;
+        }
+        .post-options {
+          background-color: #fff;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          border-radius: 10px;
+          border-radius: 10px;
+          padding: 1.5%;
+          position: absolute;
+          top: 4vh;
+          right: 1.5vw;
+          ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            li {
+              padding-bottom: 2px;
+              border-bottom: 0.5px #ccc solid;
+              cursor: pointer;
+            }
+            .last-li {
+              border: none;
+              padding-bottom: 0;
+            }
+          }
         }
       }
       .post-desc {
@@ -133,11 +242,124 @@ body {
       .post-statistics > div > i {
         cursor: pointer;
       }
+      .post-comment-list {
+        .comment {
+          position: relative;
+          .owner-img {
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+          .comment-option {
+            color: #888;
+            cursor: pointer;
+          }
+          .comment-options {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 10px;
+            border-radius: 10px;
+            padding: 1%;
+            position: absolute;
+            top: 1vh;
+            right: 1.5vw;
+            ul {
+              padding-left: 0;
+              margin-bottom: 0;
+              list-style: none;
+              li {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .add-commnet {
+          input {
+            border-radius: 5px;
+            height: 6vh;
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #e4e4e4;
+            width: 100%;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 14px;
+          }
+        }
+      }
     }
     .profile-left {
+      .container0 {
+        height: 100vh;
+      }
       .profile-pic {
         img {
-          width: 100%;
+          width: 60%;
+          border-radius: 10px;
+        }
+      }
+      .edit-profile-pic {
+        i {
+          margin-top: -1000px;
+        }
+      }
+      .user-details {
+        p {
+          margin-bottom: 5px;
+        }
+        span {
+          color: #888;
+        }
+      }
+      .more-details {
+        ul {
+          width: 80%;
+          padding-left: 0;
+          list-style: none;
+          li {
+            padding: 5px;
+          }
+          li:nth-child(1) {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            background-color: #f9a507;
+          }
+          li:nth-child(2) {
+            background-color: #f2ae2f;
+          }
+          li:nth-child(3) {
+            background-color: #ffbf00;
+          }
+          li:nth-child(4) {
+            background-color: #ffb730;
+          }
+          li:nth-child(5) {
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #f9da23;
+            .spacer {
+              color: white;
+            }
+          }
+          li:nth-child(6) {
+            i {
+              padding-right: 8px;
+              font-size: xx-large;
+            }
+          }
+        }
+      }
+    }
+    .services-container {
+      .service {
+        width: 23%;
+        .card-body {
+          .card-text {
+            color: #f2ae2f;
+          }
         }
       }
     }
