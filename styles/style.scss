@@ -36,8 +36,31 @@ body {
   .navbar-brand {
     font-size: 26px;
   }
-  .ez-resbonsive-navbar {
-    visibility: hidden;
+}
+#sideNavbar {
+  display: none;
+  .close-sidebar {
+    height: 8vh;
+    width: 10vw;
+  }
+  ul {
+    font-size: x-large;
+    li {
+      padding: 1%;
+    }
+    .profile-figure {
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      i {
+        margin-right: 10px;
+      }
+    }
   }
 }
 .ez-body {
@@ -150,8 +173,27 @@ body {
         border-radius: 10px;
         background: #888;
       }
-
       overflow: scroll;
+      .my-story {
+        position: relative;
+        i {
+          position: absolute;
+          top: 44%;
+          left: 44%;
+          color: #fff;
+          font-size: xx-large;
+        }
+      }
+      .add-story-modal {
+        .modal-body {
+          #story-text {
+            border: none;
+          }
+          #story-img {
+            border: none;
+          }
+        }
+      }
       .story {
         margin: 8px;
         img {
@@ -160,28 +202,51 @@ body {
           height: 25vh;
         }
       }
-    }
-    .add-post {
-      .settings {
-        background-color: white;
-        width: 9%;
-        border-radius: 10px;
-        p {
-          margin-bottom: 0;
+      .show-story-modal {
+        .modal-dialog {
+          margin-top: 10vh;
+        }
+        .modal-body {
+          padding: 0;
+        }
+        .story-content {
+          position: relative;
+          img {
+            border-radius: 0;
+          }
+          p {
+            position: absolute;
+            bottom: 1vh;
+            left: 13%;
+            color: #fff;
+          }
         }
       }
-      .settings:hover {
-        background-color: $li-hover-bg-color;
-      }
+    }
+    .add-post {
       input {
         border: none;
         border-radius: 10px;
         height: 6vh;
         padding-left: 1vw;
       }
+      #post-category,
+      #post-privacy,
+      #post-text {
+        border: none;
+      }
       .model-content {
         border-radius: 100px !important;
       }
+    }
+    .settings {
+      background-color: white;
+      height: 6vh;
+      width: 14%;
+      border-radius: 10px;
+    }
+    .settings:hover {
+      background-color: $li-hover-bg-color;
     }
     .section-navigator {
       button {
@@ -230,6 +295,11 @@ body {
               padding-bottom: 0;
             }
           }
+        }
+      }
+      .post-advertise-modal {
+        select {
+          border: 0;
         }
       }
       .post-desc {
@@ -363,6 +433,9 @@ body {
         }
       }
     }
+  }
+  .profile-center-content {
+    padding-right: 0;
   }
   #ez-body__right-sidebar {
     @include sidebar();
