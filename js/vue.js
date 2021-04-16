@@ -16,18 +16,18 @@ const app = Vue.createApp({
       posts: [
         {
           id: 0,
-          date: '2021-4-6',
+          date: '2021-04-06',
           username: "Eslam Magdy",
           userProfile: "http://www.google.com",
           profilePic: "https://images.unsplash.com/photo-1617464629317-512a99e7872f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-          textType: "en",
+          textType: "ar",
           text: `bla bla bla`,
           mediaType: "img",
           mediaCount: 1,
           media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
-          likes: 500,
-          liked: true,
-          comments: 200,
+          likes: 0,
+          liked: false,
+          comments: 1,
           viewComments: true,
           commentsContent: [
             {
@@ -35,7 +35,18 @@ const app = Vue.createApp({
               username: "test",
               userProfile: "http://www.google.com",
               profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
-              content: "bla blabla blabla"
+              content: "bla blabla blabla",
+              mediaType: "",
+              media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            },
+            {
+              id: 0,
+              username: "test",
+              userProfile: "http://www.google.com",
+              profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
+              content: "bla blabla blabla",
+              mediaType: "",
+              media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             }
           ],
           shares: 7,
@@ -120,7 +131,7 @@ app.component('comment-component', {
   },
   template: `
     <div class="comment d-flex justify-content-between">
-      <div class="comment-owner d-flex align-items-center p-2">
+      <div class="comment-owner d-flex p-2">
         <div class="owner-img">
           <img
             :src="comment.profilePic"
@@ -130,6 +141,10 @@ app.component('comment-component', {
         <div class="owner-name pl-3">
           <a :href="comment.userProfile" class="mb-0"><b>{{comment.username}}</b></a>
           <p class="comment-content mb-0">{{comment.content}}</p>
+          <img v-if="comment.mediaType == 'img'" :src="comment.media" class="w-100">
+          <video v-if="comment.mediaType == 'video'" controls>
+            <source :src="comment.media" type="video/mp4">
+          </video>
         </div>
       </div>
       <div class="comment-options" :class="'comment-options-'+comment.id">
@@ -137,7 +152,7 @@ app.component('comment-component', {
           <li>Report This Comment</li>
         </ul>
       </div>
-      <div @click="toggleCommentOptions(comment.id)" class="comment-option ml-auto pr-3">
+      <div @click="toggleCommentOptions(comment.id)" class="comment-option ml-auto pr-3 pt-2">
         <i class="fas fa-ellipsis-v"></i>
       </div>
     </div>
@@ -162,8 +177,14 @@ app.component('post-component', {
       else this.post.saved = true
     },
     toggleLikePost(id) {
-      if (this.post.liked) this.post.liked = false
-      else this.post.liked = true
+      if (this.post.liked) {
+        this.post.liked = false
+        this.post.likes--
+      }
+      else {
+        this.post.liked = true
+        this.post.likes++
+      }
     },
     toggleComments() {
       if (this.post.viewComments) this.post.viewComments = false
@@ -208,7 +229,7 @@ app.component('post-component', {
             alt="opel car"
           />
           <video v-if="post.mediaType == 'video' && post.mediaCount == 1" controls>
-            <source src="mov_bbb.mp4" type="video/mp4">
+            <source :src="post.media" type="video/mp4">
             Your browser does not support HTML video.
           </video>
         </div>

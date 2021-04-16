@@ -323,6 +323,11 @@ body {
         cursor: pointer;
       }
       .post-comment-list {
+        .hide-commnet-list {
+          span {
+            cursor: pointer;
+          }
+        }
         .comment {
           position: relative;
           .owner-img {

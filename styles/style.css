@@ -363,6 +363,10 @@ body {
   cursor: pointer;
 }
 
+.ez-body #ez-body__center-content .post-container .post-comment-list .hide-commnet-list span {
+  cursor: pointer;
+}
+
 .ez-body #ez-body__center-content .post-container .post-comment-list .comment {
   position: relative;
 }

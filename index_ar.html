@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style-rtl.css" />
     <script src="https://unpkg.com/vue@next"></script>
     <title>Business Home</title>
   </head>
@@ -119,85 +120,95 @@
     </div>
     <section class="container-fluid ez-main">
       <section class="ez-body row" id="app">
-        <section id="ez-body__left-sidebar" class="col-lg-2 ez-sidebar">
-          <ul id="left-sidebar__items">
-            <li class="mt-2">
-              <a href="profile.html"
-                ><img
-                  class="profile-figure"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                  alt="My Profile Pic"
-                />
-                <span>Eslam Magdy</span></a
-              >
-            </li>
+        <section id="ez-body__right-sidebar" class="col-lg-2 ez-sidebar">
+          <ul class="pt-4" id="right-sidebar__items">
             <li>
-              <a aria-current="page" href="#"
-                ><i class="fas fa-home p"></i> Home</a
-              >
+              <h6 class="pb-2">Posts You May Like</h6>
+              <div class="suggested-posts mb-1">
+                <div class="post">
+                  <section class="posted-by">
+                    <span class="pr-2">Eslam Magdy</span>
+                    <img
+                      class="profile-figure"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      alt="User Profile Pic"
+                    />
+                  </section>
+                  <section class="post-desc">
+                    <p>Hello World :D ♥ !</p>
+                  </section>
+                  <section class="post-img">
+                    <img
+                      width="100%"
+                      height="120px"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      alt="Post Pic"
+                    />
+                  </section>
+                </div>
+              </div>
             </li>
-            <li>
-              <a href="#"><i class="fas fa-hand-holding-usd p"></i> Services</a>
+            <li class="mt-3">
+              <h6 class="pb-2">People You May Wanna Follow</h6>
+              <div class="suggested-peoples">
+                <div class="people mt-2">
+                  <button class="btn btn-warning text-white">Follow</button>
+                  <div class="people-info d-flex flex-row-reverse">
+                    <img
+                      class="profile-figure"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      alt="User Profile Pic"
+                    />
+                    <div class="d-flex flex-column align-items-center">
+                      <p><b>Eslam Magdy</b></p>
+                      <p>3k Follower</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="people mt-2">
+                  <button class="btn btn-warning text-white">Follow</button>
+                  <div class="people-info d-flex flex-row-reverse">
+                    <img
+                      class="profile-figure"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      alt="User Profile Pic"
+                    />
+                    <div class="d-flex flex-column align-items-center">
+                      <p><b>Eslam Magdy</b></p>
+                      <p>3k Follower</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li>
-              <a href="#"><i class="fas fa-users p"></i> Groups</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-truck p"></i> Delivery</a>
-            </li>
-            <li>
-              <a href="#"><i class="far fa-copy p"></i> Pages</a>
-            </li>
-            <li
-              style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              <a href="#"><i class="fas fa-bell p"></i> Notifications</a
-              ><span class="badge bg-warning text-dark">2</span>
-            </li>
-            <li
-              style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              <a href="#"><i class="fas fa-comment-dots p"></i> Messages</a>
-              <span class="badge bg-warning text-dark">3</span>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-bookmark p"></i> Saved Posts</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-headset p"></i> Support</a>
-            </li>
-            <li class="dropdown">
-              <a
-                class="dropdown-toggle"
-                href="#"
-                role="button"
-                id="dropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fas fa-language"></i> Language
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Arabic</a></li>
-              </ul>
+            <li class="mt-3">
+              <h6 class="pb-2">Groups You May Like</h6>
+              <div class="suggested-groups">
+                <div class="group">
+                  <div class="group-banner">
+                    <img
+                      width="100%"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2 group-info">
+                    <button class="btn btn-warning text-white">Join</button>
+                    <div>
+                      <p><b>Eslam Group</b></p>
+                      <p>3k Member</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
         <section id="ez-body__center-content" class="col-lg-8 mt-3">
           <div class="search-bar">
-            <input type="text" placeholder="Search" />
+            <input class="pr-3" type="text" placeholder="Search" />
           </div>
-          <div class="stories d-flex mt-2">
+          <div class="stories d-flex mt-2 flex-row-reverse">
             <div
               class="my-story story"
               data-toggle="modal"
@@ -408,94 +419,78 @@
             <input
               type="text"
               placeholder="Add New Post"
-              class="w-100"
+              class="w-100 pr-3"
               data-toggle="modal"
               data-target="#add-post-modal"
             />
           </div>
           <post-component v-for="post in posts" :data="post"></post-component>
         </section>
-        <section id="ez-body__right-sidebar" class="col-lg-2 ez-sidebar">
-          <ul class="pt-4" id="right-sidebar__items">
+        <section id="ez-body__left-sidebar" class="col-lg-2 ez-sidebar">
+          <ul id="left-sidebar__items">
+            <li class="mt-2">
+              <a href="profile.html">
+                <span class="pr-2">اسلام مجدي</span>
+                <img
+                  class="profile-figure"
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                  alt="My Profile Pic"
+                />
+              </a>
+            </li>
             <li>
-              <h6 class="pb-2">Posts You May Like</h6>
-              <div class="suggested-posts mb-1">
-                <div class="post">
-                  <section class="posted-by">
-                    <img
-                      class="profile-figure"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt="User Profile Pic"
-                    />
-                    <span>Eslam Magdy</span>
-                  </section>
-                  <section class="post-desc">
-                    <p>Hello World :D ♥ !</p>
-                  </section>
-                  <section class="post-img">
-                    <img
-                      width="100%"
-                      height="120px"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt="Post Pic"
-                    />
-                  </section>
-                </div>
-              </div>
+              <a aria-current="page" href="#"
+                >Home <i class="fas fa-home p"></i
+              ></a>
             </li>
-            <li class="mt-3">
-              <h6 class="pb-2">People You May Wanna Follow</h6>
-              <div class="suggested-peoples">
-                <div class="people mt-2">
-                  <div class="people-info d-flex">
-                    <img
-                      class="profile-figure"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt="User Profile Pic"
-                    />
-                    <div class="d-flex flex-column align-items-center">
-                      <p><b>Eslam Magdy</b></p>
-                      <p>3k Follower</p>
-                    </div>
-                  </div>
-                  <button class="btn btn-warning text-white">Follow</button>
-                </div>
-                <div class="people mt-2">
-                  <div class="people-info d-flex">
-                    <img
-                      class="profile-figure"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt="User Profile Pic"
-                    />
-                    <div class="d-flex flex-column align-items-center">
-                      <p><b>Eslam Magdy</b></p>
-                      <p>3k Follower</p>
-                    </div>
-                  </div>
-                  <button class="btn btn-warning text-white">Follow</button>
-                </div>
-              </div>
+            <li>
+              <a href="#"
+                >Services <i class="fas fa-hand-holding-usd p"></i>
+              </a>
             </li>
-            <li class="mt-3">
-              <h6 class="pb-2">Groups You May Like</h6>
-              <div class="suggested-groups">
-                <div class="group">
-                  <div class="group-banner">
-                    <img
-                      width="100%"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div class="mt-2 group-info">
-                    <div>
-                      <p><b>Eslam Group</b></p>
-                      <p>3k Member</p>
-                    </div>
-                    <button class="btn btn-warning text-white">Join</button>
-                  </div>
-                </div>
-              </div>
+            <li>
+              <a href="#">Groups <i class="fas fa-users p"></i></a>
+            </li>
+            <li>
+              <a href="#">Delivery <i class="fas fa-truck p"></i></a>
+            </li>
+            <li>
+              <a href="#">Pages <i class="far fa-copy p"></i></a>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center flex-row-reverse"
+            >
+              <a href="#">Notifications <i class="fas fa-bell p"></i></a
+              ><span class="badge bg-warning text-dark">2</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center flex-row-reverse"
+            >
+              <a href="#">Messages <i class="fas fa-comment-dots p"></i></a>
+              <span class="badge bg-warning text-dark">3</span>
+            </li>
+            <li>
+              <a href="#">Saved Posts <i class="fas fa-bookmark p"></i></a>
+            </li>
+            <li>
+              <a href="#">Support <i class="fas fa-headset p"></i></a>
+            </li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Language <i class="fas fa-language"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Arabic</a></li>
+              </ul>
             </li>
           </ul>
         </section>

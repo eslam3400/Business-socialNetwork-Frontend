@@ -1,0 +1,31 @@
+.ez-body {
+  #ez-body__left-sidebar,
+  #ez-body__right-sidebar {
+    text-align: right;
+  }
+  #ez-body__center-content {
+    .search-bar {
+      input {
+        text-align: right;
+      }
+    }
+    .add-post {
+      input {
+        text-align: right;
+      }
+    }
+  }
+}
+.container-fluid {
+  padding-right: 0;
+  .row {
+    margin: 0;
+    #ez-body__center-content {
+      padding-left: 0;
+      .profile-center-content {
+        padding-left: 0;
+        padding-right: 15px;
+      }
+    }
+  }
+}
