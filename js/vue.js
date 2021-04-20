@@ -1,18 +1,6 @@
 const app = Vue.createApp({
   data() {
     return {
-      stories: [
-        {
-          by: "0",
-          media: "https://images.unsplash.com/photo-1617440169032-c3582e03efc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-          text: "blabla blabla blabla blabla blabla blabla blabla blabla"
-        },
-        {
-          by: "1",
-          media: "https://images.unsplash.com/photo-1617419086540-518c5b847b88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-          text: "test test test test test test test test test test"
-        }
-      ],
       posts: [
         {
           id: 0,
@@ -53,22 +41,69 @@ const app = Vue.createApp({
           saved: false,
         },
         {
-          id: 1,
+          id: 0,
+          type: "shared",
+          date: '2021-04-06',
           username: "Eslam Magdy",
+          userProfile: "http://www.google.com",
           profilePic: "https://images.unsplash.com/photo-1617464629317-512a99e7872f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-          media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-          text: "bla bla bla",
-          likes: 500,
-          comments: 200,
+          textType: "ar",
+          text: `bla bla bla`,
+          mediaType: "img",
+          mediaCount: 1,
+          media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
+          likes: 0,
+          liked: false,
+          comments: 1,
+          viewComments: true,
+          commentsContent: [
+            {
+              id: 0,
+              username: "test",
+              userProfile: "http://www.google.com",
+              profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
+              content: "bla blabla blabla",
+              mediaType: "",
+              media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            },
+            {
+              id: 0,
+              username: "test",
+              userProfile: "http://www.google.com",
+              profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
+              content: "bla blabla blabla",
+              mediaType: "",
+              media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            }
+          ],
           shares: 7,
-          saved: false
+          saved: false,
         }
       ]
     }
   }
 })
 
-app.component('story-component', {
+const story = Vue.createApp({
+  data() {
+    return {
+      stories: [
+        {
+          by: "0",
+          media: "https://images.unsplash.com/photo-1617440169032-c3582e03efc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+          text: "blabla blabla blabla blabla blabla blabla blabla blabla"
+        },
+        {
+          by: "1",
+          media: "https://images.unsplash.com/photo-1617419086540-518c5b847b88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          text: "test test test test test test test test test test"
+        }
+      ],
+    }
+  },
+})
+
+story.component('story-component', {
   props: [
     'by',
     'media',
@@ -563,3 +598,4 @@ app.component('post-component', {
 })
 
 app.mount('#app')
+story.mount('#story')

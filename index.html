@@ -118,7 +118,7 @@
       </div>
     </div>
     <section class="container-fluid ez-main">
-      <section class="ez-body row" id="app">
+      <section class="ez-body row">
         <section id="ez-body__left-sidebar" class="col-lg-2 ez-sidebar">
           <ul id="left-sidebar__items">
             <li class="mt-2">
@@ -197,7 +197,7 @@
           <div class="search-bar">
             <input type="text" placeholder="Search" />
           </div>
-          <div class="stories d-flex mt-2">
+          <div class="stories d-flex mt-2" id="story">
             <div
               class="my-story story"
               data-toggle="modal"
@@ -413,7 +413,9 @@
               data-target="#add-post-modal"
             />
           </div>
-          <post-component v-for="post in posts" :data="post"></post-component>
+          <div id="app">
+            <post-component v-for="post in posts" :data="post"></post-component>
+          </div>
         </section>
         <section id="ez-body__right-sidebar" class="col-lg-2 ez-sidebar">
           <ul class="pt-4" id="right-sidebar__items">

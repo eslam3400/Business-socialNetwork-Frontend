@@ -12,15 +12,11 @@
 }
 
 .container-fluid {
-  padding-right: 0;
+  padding: 0;
 }
 
 .container-fluid .row {
   margin: 0;
-}
-
-.container-fluid .row #ez-body__center-content {
-  padding-left: 0;
 }
 
 .container-fluid .row #ez-body__center-content .profile-center-content {
