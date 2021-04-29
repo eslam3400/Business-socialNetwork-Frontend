@@ -8,3 +8,10 @@ let closeSidenav = () => {
   $('#sideNavbar').css('display', 'none')
   $('.navbar').css('position', 'static')
 }
+
+let commentAttach = () => {
+  $("#file1").trigger('click');
+}
+
+$("#post-type-service").click(() => $("#post-type-service-content").removeClass("d-none"))
+$("#post-type-post").click(() => $("#post-type-service-content").addClass("d-none"))

@@ -338,7 +338,8 @@
                             type="radio"
                             name="post-type"
                             value="post"
-                            id="post"
+                            id="post-type-post"
+                            checked
                           />
                           <span class="pl-2">Post</span>
                         </div>
@@ -348,7 +349,7 @@
                             type="radio"
                             name="post-type"
                             value="service"
-                            id="service"
+                            id="post-type-service"
                           />
                           <span class="pl-2">Service</span>
                         </div>
@@ -365,17 +366,29 @@
                           <option value="audi">Audi</option>
                         </select>
                       </div>
-                      <!-- Select post Category -->
-                      <div
-                        class="post-category d-flex justify-content-between align-items-center m-auto w-75"
-                      >
-                        <label for="cars">Choose A Category:</label>
-                        <select id="post-category" name="category">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="fiat">Fiat</option>
-                          <option value="audi">Audi</option>
-                        </select>
+                      <div id="post-type-service-content" class="d-none">
+                        <!-- Select Service Category -->
+                        <div
+                          class="post-category d-flex justify-content-between align-items-center m-auto w-75"
+                        >
+                          <label for="cars">Choose A Category:</label>
+                          <select id="post-category" name="category">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        </div>
+                        <!-- Select Service Price -->
+                        <div
+                          class="post-category d-flex justify-content-between align-items-center m-auto w-75"
+                        >
+                          <input
+                            class="w-100 border"
+                            type="number"
+                            placeholder="Service Price $"
+                          />
+                        </div>
                       </div>
                       <!-- Post Desc -->
                       <div class="post-desc d-flex justify-content-center mt-2">
@@ -385,7 +398,7 @@
                           id="post-text"
                           cols="200"
                           rows="4"
-                          placeholder="Start Typing..."
+                          placeholder="Post Description..."
                         ></textarea>
                       </div>
                       <!-- Post Images -->
@@ -405,7 +418,7 @@
                       >
                         <button
                           type="button"
-                          class="btn btn-secondary btn-block w-75"
+                          class="btn btn-warning btn-block w-75"
                           data-dismiss="modal"
                         >
                           Save

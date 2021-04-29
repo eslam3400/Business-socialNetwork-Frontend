@@ -5,14 +5,16 @@ const app = Vue.createApp({
         {
           id: 0,
           date: '2021-04-06',
+          // Post Type ['shared','post','service']
+          postType: "post",
           username: "Eslam Magdy",
           userProfile: "http://www.google.com",
           profilePic: "https://images.unsplash.com/photo-1617464629317-512a99e7872f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-          textType: "ar",
+          textType: "en",
           text: `bla bla bla`,
           mediaType: "img",
           mediaCount: 1,
-          media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
+          media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
           likes: 0,
           liked: false,
           comments: 1,
@@ -28,7 +30,7 @@ const app = Vue.createApp({
               media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             },
             {
-              id: 0,
+              id: 1,
               username: "test",
               userProfile: "http://www.google.com",
               profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
@@ -41,7 +43,7 @@ const app = Vue.createApp({
           saved: false,
         },
         {
-          id: 0,
+          id: 1,
           type: "shared",
           date: '2021-04-06',
           username: "Eslam Magdy",
@@ -51,14 +53,14 @@ const app = Vue.createApp({
           text: `bla bla bla`,
           mediaType: "img",
           mediaCount: 1,
-          media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
+          media: ["https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",],
           likes: 0,
           liked: false,
           comments: 1,
           viewComments: true,
           commentsContent: [
             {
-              id: 0,
+              id: 2,
               username: "test",
               userProfile: "http://www.google.com",
               profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
@@ -67,7 +69,7 @@ const app = Vue.createApp({
               media: "https://images.unsplash.com/photo-1611095788646-86737a001141?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             },
             {
-              id: 0,
+              id: 3,
               username: "test",
               userProfile: "http://www.google.com",
               profilePic: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
@@ -225,6 +227,9 @@ app.component('post-component', {
       if (this.post.viewComments) this.post.viewComments = false
       else this.post.viewComments = true
     },
+    commentAttach(id) {
+      $("#comment-attach-" + id).trigger('click');
+    },
     deletePost(id) { $('#post-' + id).css('display', 'none') },
   },
   template: `
@@ -258,11 +263,73 @@ app.component('post-component', {
         <pre v-if="post.textType == 'ar'" style="text-align:right;">{{post.text}}</pre>
         <pre v-else style="text-align:left;">{{post.text}}</pre>
         <div class="media">
-          <img
-            v-if="post.mediaType == 'img' && post.mediaCount == 1"
-            :src="post.media"
-            alt="opel car"
-          />
+          <div v-if="post.mediaType == 'img' && post.mediaCount == 1">
+            <img
+              :src="post.media"
+              alt="opel car"
+            />
+          </div>
+          <div v-if="post.mediaType == 'img' && post.mediaCount == 2" class="d-flex">
+            <img
+              v-for="img in post.media"
+              :src="post.media"
+              alt="opel car"
+              class="w-50 p-1"
+            />
+          </div>
+          <div v-if="post.mediaType == 'img' && post.mediaCount == 3">
+            <img
+              class="d-block w-100"
+              :src="post.media[0]"
+              alt="opel car"
+            />
+            <div class="d-flex">
+              <img
+                :src="post.media[1]"
+                alt="opel car"
+                class="w-50 pr-1 pt-2"
+              />
+              <img
+                :src="post.media[2]"
+                alt="opel car"
+                class="w-50 pl-1 pt-2"
+              />
+            </div>
+          </div>
+          <div v-if="post.mediaType == 'img' && post.mediaCount == 4">
+            <div class="d-flex">
+              <img
+                :src="post.media[0]"
+                alt="opel car"
+                class="w-50 pr-1"
+              />
+              <img
+                :src="post.media[1]"
+                alt="opel car"
+                class="w-50 pl-1"
+              />
+            </div>
+            <div class="d-flex">
+              <img
+                :src="post.media[2]"
+                alt="opel car"
+                class="w-50 pr-1 pt-2"
+              />
+              <img
+                :src="post.media[3]"
+                alt="opel car"
+                class="w-50 pl-1 pt-2"
+              />
+            </div>
+          </div>
+          <div v-if="post.mediaType == 'img' && post.mediaCount > 4" class="d-flex">
+            <img
+              v-if="post.mediaCount <= 4"
+              v-for="img in post.media"
+              :src="post.media"
+              alt="opel car"
+            />
+          </div>
           <video v-if="post.mediaType == 'video' && post.mediaCount == 1" controls>
             <source :src="post.media" type="video/mp4">
             Your browser does not support HTML video.
@@ -294,14 +361,18 @@ app.component('post-component', {
           :data="comment">
         </comment-component>
       </div>
-        <div class="add-commnet mt-2">
+        <form class="add-commnet mt-2 d-flex align-items-center">
           <input
             class="w-100 pl-2"
             type="text"
             name="comment"
             placeholder="Add Your Commnet"
           />
-        </div>
+          <div class="d-flex align-items-center pr-3">
+            <i class="fas fa-paperclip" @click="commentAttach(post.id)"></i>
+            <input type="file" :id="'comment-attach-'+post.id" name="img" accept="image/*" />
+          </div>
+        </form>
       <div class="post-advertise-modal">
         <div
           class="modal fade"
@@ -325,10 +396,10 @@ app.component('post-component', {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body pl-5 pr-5">
                 <form action="" class="container">
                   <p>Select Duration:</p>
-                  <div class="form-group form-check">
+                  <div class="form-group form-check mb-1">
                     <input
                       type="radio"
                       name="duration"
@@ -339,7 +410,8 @@ app.component('post-component', {
                       >3 days</label
                     >
                   </div>
-                  <div class="form-group form-check">
+                  <hr class="m-1">
+                  <div class="form-group form-check mb-1">
                     <input
                       type="radio"
                       name="duration"
@@ -350,6 +422,7 @@ app.component('post-component', {
                       >5 days</label
                     >
                   </div>
+                  <hr class="m-1">
                   <div class="form-group form-check">
                     <input
                       type="radio"
@@ -362,7 +435,7 @@ app.component('post-component', {
                     >
                   </div>
                   <p>Select Audience:</p>
-                  <div class="form-group form-check">
+                  <div class="form-group form-check mb-1">
                     <input
                       type="radio"
                       name="audience"
@@ -373,7 +446,8 @@ app.component('post-component', {
                       >From 100 To 1000</label
                     >
                   </div>
-                  <div class="form-group form-check">
+                  <hr class="m-1">
+                  <div class="form-group form-check mb-1">
                     <input
                       type="radio"
                       name="audience"
@@ -384,6 +458,7 @@ app.component('post-component', {
                       >From 1000 To 2000</label
                     >
                   </div>
+                  <hr class="m-1">
                   <div class="form-group form-check">
                     <input
                       type="radio"
@@ -436,7 +511,7 @@ app.component('post-component', {
                     </select>
                   </div>
                   <input type="hidden" name="postId" :value="post.id">
-                  <button type="submit" class="btn btn-primary">
+                  <button type="submit" class="btn btn-warning btn-block">
                     Submit
                   </button>
                 </form>
@@ -472,31 +547,6 @@ app.component('post-component', {
                   class="container"
                   enctype="multipart/form-data"
                 >
-                  <!-- Select Post Type -->
-                  <div
-                    class="post-type d-flex justify-content-between align-items-center m-auto w-75"
-                  >
-                    <div>Post As:</div>
-                    <div class="d-flex align-items-center">
-                      <input
-                        type="radio"
-                        name="post-type"
-                        value="post"
-                        id="post"
-                      />
-                      <span class="pl-2">Post</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <input
-                        class="m-0"
-                        type="radio"
-                        name="post-type"
-                        value="service"
-                        id="service"
-                      />
-                      <span class="pl-2">Service</span>
-                    </div>
-                  </div>
                   <!-- Select post Privacy -->
                   <div
                     class="post-privacy d-flex justify-content-between align-items-center m-auto w-75"
@@ -509,17 +559,29 @@ app.component('post-component', {
                       <option value="audi">Audi</option>
                     </select>
                   </div>
-                  <!-- Select post Category -->
-                  <div
-                    class="post-category d-flex justify-content-between align-items-center m-auto w-75"
-                  >
-                    <label for="cars">Choose A Category:</label>
-                    <select id="post-category" name="category">
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="fiat">Fiat</option>
-                      <option value="audi">Audi</option>
-                    </select>
+                  <div v-if="post.postType == 'service'" id="post-type-service-content">
+                    <!-- Select Service Category -->
+                    <div
+                      class="post-category d-flex justify-content-between align-items-center m-auto w-75"
+                    >
+                      <label for="cars">Choose A Category:</label>
+                      <select id="post-category" name="category">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+                    <!-- Select Service Price -->
+                    <div
+                      class="post-category d-flex justify-content-between align-items-center m-auto w-75"
+                    >
+                      <input
+                        class="w-100 border"
+                        type="number"
+                        placeholder="Service Price $"
+                      />
+                    </div>
                   </div>
                   <!-- Post Desc -->
                   <div class="post-desc d-flex justify-content-center mt-2">
@@ -550,7 +612,7 @@ app.component('post-component', {
                   >
                     <button
                       type="button"
-                      class="btn btn-secondary btn-block w-75"
+                      class="btn btn-warning btn-block w-75"
                       data-dismiss="modal"
                     >
                       Save
@@ -585,7 +647,7 @@ app.component('post-component', {
               <div class="modal-body">
                 <button
                   type="button"
-                  class="btn btn-secondary btn-block w-100"
+                  class="btn btn-warning btn-block w-100"
                   data-dismiss="modal"
                   @click="deletePost(post.id)">Delete</button>
               </div>
