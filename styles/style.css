@@ -266,18 +266,67 @@ body {
   padding: 0;
 }
 
-.ez-body #ez-body__center-content .stories .show-story-modal .story-content {
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img {
   position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
 }
 
-.ez-body #ez-body__center-content .stories .show-story-modal .story-content img {
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img button {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img img {
   border-radius: 0;
 }
 
-.ez-body #ez-body__center-content .stories .show-story-modal .story-content p {
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img p {
   position: absolute;
   bottom: 1vh;
   color: #fff;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-text {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-text button {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio button {
+  z-index: 99;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio img {
+  border-radius: 0;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio p {
+  position: absolute;
+  bottom: 1vh;
+  color: #fff;
+}
+
+.ez-body #ez-body__center-content .add-post .modal-header {
+  border-bottom: 0;
 }
 
 .ez-body #ez-body__center-content .add-post input {
@@ -288,13 +337,17 @@ body {
 }
 
 .ez-body #ez-body__center-content .add-post #post-category,
-.ez-body #ez-body__center-content .add-post #post-privacy,
-.ez-body #ez-body__center-content .add-post #post-text {
+.ez-body #ez-body__center-content .add-post #post-privacy {
   border: none;
 }
 
-.ez-body #ez-body__center-content .add-post .model-content {
-  border-radius: 100px !important;
+.ez-body #ez-body__center-content .add-post #post-text {
+  border-radius: 10px;
+  border: 0.5px #dee2e6 solid;
+}
+
+.ez-body #ez-body__center-content .add-post .modal-content {
+  border-radius: 10px;
 }
 
 .ez-body #ez-body__center-content .settings {

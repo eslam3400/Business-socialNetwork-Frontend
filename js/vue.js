@@ -112,44 +112,7 @@ story.component('story-component', {
     'text',
   ],
   template: `
-    <div
-      class="story"
-      data-toggle="modal"
-      :data-target="'#showStoryModal-'+by"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-      />
-    </div>
-    <div class="show-story-modal">
-      <div
-        class="modal fade"
-        :id="'showStoryModal-'+by"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" style="margin-top: 6vh">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between">
-              <button
-                type="button"
-                class="close ml-0"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="story-content">
-                <img class="w-100 h-100" :src="media" />
-                <p class="m-auto text-center w-100 p-2">{{text}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   `
 })
 
