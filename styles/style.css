@@ -21,6 +21,11 @@ body {
   color: white;
 }
 
+.ez-navbar .right-side ul {
+  position: absolute;
+  right: 0;
+}
+
 .ez-navbar .right-side ul li {
   padding: 5%;
   border-radius: 10px;
