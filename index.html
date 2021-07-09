@@ -35,19 +35,23 @@
     </div>
   </nav>
   <div class="w3-sidebar w3-bar-block" id="sideNavbar">
-    <div class="d-flex flex-row-reverse justify-content-between">
-      <div class="w-25 d-flex flex-row-reverse">
-        <button class="close-sidebar btn btn-danger p-3 m-3" onclick="closeSidenav()">
-          <i class="fas fa-times"></i>
-        </button>
+    <div class="container">
+      <div class="d-flex flex-row-reverse justify-content-between">
+        <div class="">
+          <button class="close-sidebar btn btn-danger p-3 m-3" onclick="closeSidenav()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="w-75 navbar-nav me-auto mb-2 mb-lg-0 p-3">
+          <li>
+            <a href="profile.html"><img class="profile-figure"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                alt="My Profile Pic" />
+              <span>Eslam Magdy</span></a>
+          </li>
+        </ul>
       </div>
-      <ul class="w-75 navbar-nav me-auto mb-2 mb-lg-0 p-3">
-        <li>
-          <a href="profile.html"><img class="profile-figure"
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-              alt="My Profile Pic" />
-            <span>Eslam Magdy</span></a>
-        </li>
+      <ul class="w-100 navbar-nav me-auto mb-2 mb-lg-0 p-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
         </li>
@@ -63,11 +67,11 @@
         <li class="nav-item">
           <a class="nav-link active" href="#"><i class="far fa-copy"></i> Pages</a>
         </li>
-        <li class="nav-item" style="display: flex; align-items: center">
+        <li class="nav-item d-flex justify-content-between" style="display: flex; align-items: center">
           <a class="nav-link active" href="#"><i class="fas fa-bell"></i> Notifications</a>
           <span class="badge bg-warning text-dark">2</span>
         </li>
-        <li class="nav-item" style="display: flex; align-items: center">
+        <li class="nav-item d-flex justify-content-between" style="display: flex; align-items: center">
           <a class="nav-link active" href="#"><i class="fas fa-comment-dots"></i> Messages</a>
           <span class="badge bg-warning text-dark">3</span>
         </li>
