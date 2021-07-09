@@ -187,116 +187,124 @@
           <div class="search-bar d-flex justify-content-center">
             <input class="w-75" type="text" placeholder="Search" />
           </div>
+          <div class="services-controller m-3 text-center">
+            <button class="btn btn-default filter-button" data-filter="all">
+              All
+            </button>
+            <button class="btn btn-default filter-button" data-filter="first">
+              First
+            </button>
+            <button class="btn btn-default filter-button" data-filter="second">
+              Second
+            </button>
+          </div>
           <div class="services-container d-flex flex-wrap mt-3">
-            <div class="service card m-2">
+            <div
+              class="service card m-2 filter first"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
               <img
                 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
+                <h5 class="card-title h6">Some quick example text</h5>
                 <p class="card-text">50$</p>
               </div>
             </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header pb-0">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Modal title
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body row">
+                    <div
+                      class="
+                        col-4
+                        p-3
+                        d-flex
+                        flex-column
+                        justify-content-between
+                      "
+                    >
+                      <div class="upper-side">
+                        <p class="text-warning">50$</p>
+                        <h6><b>Product Description</b></h6>
+                        <p class="text-muted">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Consequuntur dolorem, numquam optio voluptas in
+                          consectetur. Illo maxime ex dolorem, dolore repellat
+                          laborum magni, ratione excepturi, cumque est eos fuga!
+                          Nesciunt!
+                        </p>
+                      </div>
+                      <div class="down-side">
+                        <h6><b>Created By</b></h6>
+                        <div class="d-flex justify-content-between">
+                          <div class="people mt-2 w-100">
+                            <div class="people-info d-flex">
+                              <img
+                                class="profile-figure rounded-circle"
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                alt="User Profile Pic"
+                              />
+                              <div
+                                class="
+                                  d-flex
+                                  flex-column
+                                  align-items-center
+                                  justify-content-center
+                                  pl-2
+                                "
+                              >
+                                <p><b>Eslam Magdy</b></p>
+                              </div>
+                            </div>
+                            <button class="btn btn-warning text-white">
+                              Follow
+                            </button>
+                          </div>
+                        </div>
+                        <button class="btn btn-warning text-white mt-3 w-100">
+                          Contact The Creatoer
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <img src="img.jpg" width="100%" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="service card m-2">
+            <div class="service card m-2 filter second">
               <img
                 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
-              </div>
-            </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
-              </div>
-            </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
-              </div>
-            </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
-              </div>
-            </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
-                <p class="card-text">50$</p>
-              </div>
-            </div>
-            <div class="service card m-2">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </h5>
+                <h5 class="card-title h6">Some quick example text</h5>
                 <p class="card-text">50$</p>
               </div>
             </div>
@@ -314,5 +322,24 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $(".filter-button").click(function () {
+          var value = $(this).attr("data-filter");
+          if (value == "all") $(".filter").show("1000");
+          else {
+            $(".filter")
+              .not("." + value)
+              .hide("3000");
+            $(".filter")
+              .filter("." + value)
+              .show("3000");
+          }
+        });
+        if ($(".filter-button").removeClass("active"))
+          $(this).removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
   </body>
 </html>
