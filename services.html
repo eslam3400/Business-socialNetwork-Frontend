@@ -188,13 +188,22 @@
             <input class="w-75" type="text" placeholder="Search" />
           </div>
           <div class="services-controller m-3 text-center">
-            <button class="btn btn-default filter-button" data-filter="all">
+            <button
+              class="btn btn-light rounded-5 filter-button ez-active"
+              data-filter="all"
+            >
               All
             </button>
-            <button class="btn btn-default filter-button" data-filter="first">
+            <button
+              class="btn btn btn-light rounded-5 filter-button"
+              data-filter="first"
+            >
               First
             </button>
-            <button class="btn btn-default filter-button" data-filter="second">
+            <button
+              class="btn btn btn-light filter-button"
+              data-filter="second"
+            >
               Second
             </button>
           </div>
@@ -252,10 +261,7 @@
                         <h6><b>Product Description</b></h6>
                         <p class="text-muted">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Consequuntur dolorem, numquam optio voluptas in
-                          consectetur. Illo maxime ex dolorem, dolore repellat
-                          laborum magni, ratione excepturi, cumque est eos fuga!
-                          Nesciunt!
+                          elit.
                         </p>
                       </div>
                       <div class="down-side">
@@ -290,7 +296,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 img-container">
                       <img src="img.jpg" width="100%" />
                     </div>
                   </div>
@@ -322,24 +328,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $(".filter-button").click(function () {
-          var value = $(this).attr("data-filter");
-          if (value == "all") $(".filter").show("1000");
-          else {
-            $(".filter")
-              .not("." + value)
-              .hide("3000");
-            $(".filter")
-              .filter("." + value)
-              .show("3000");
-          }
-        });
-        if ($(".filter-button").removeClass("active"))
-          $(this).removeClass("active");
-        $(this).addClass("active");
-      });
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>
