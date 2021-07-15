@@ -690,7 +690,10 @@ body {
             }
           }
           .img-container{
-            img{max-height: 65vh;}
+            img{
+              max-height: 65vh;
+              min-width: 100%;
+            }
           }
         }
       }
@@ -862,12 +865,28 @@ body {
           }
         }
       }
+      .services-container{
+        .service{
+          width: 31%;
+        }
+        .service-modal{
+          margin-top: 2.5vh;
+          .modal-dialog{
+            max-width: 95vw;
+            margin: 1rem;
+          }
+        }
+      }
     }
 
     #ez-body__right-sidebar {
       display: none;
     }
   }
+}
+
+@media (max-width: 768px){
+  
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {

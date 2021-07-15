@@ -660,6 +660,7 @@ body {
 
 .ez-body #ez-body__center-content .services-container .modal .modal-body .img-container img {
   max-height: 65vh;
+  min-width: 100%;
 }
 
 .ez-body .profile-center-content {
@@ -842,6 +843,16 @@ body {
   }
   .ez-body #ez-body__center-content .stories .story img {
     width: 25vw;
+  }
+  .ez-body #ez-body__center-content .services-container .service {
+    width: 31%;
+  }
+  .ez-body #ez-body__center-content .services-container .service-modal {
+    margin-top: 2.5vh;
+  }
+  .ez-body #ez-body__center-content .services-container .service-modal .modal-dialog {
+    max-width: 95vw;
+    margin: 1rem;
   }
   .ez-body #ez-body__right-sidebar {
     display: none;
