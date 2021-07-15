@@ -640,9 +640,9 @@ body {
         }
       }
     }
-    .services-controller{
-      .ez-active{
-        background-color:$yellow-bg;
+    .services-controller {
+      .ez-active {
+        background-color: $yellow-bg;
         color: white;
       }
     }
@@ -657,16 +657,18 @@ body {
           }
         }
       }
-      .modal{
+      .modal {
         margin-top: 5vh;
-        .modal-dialog{
+        .modal-dialog {
           max-width: 65vw;
         }
-        .modal-header{
+        .modal-header {
           border-bottom: 0;
         }
-        .modal-body{
-          h6  {text-decoration: underline;}
+        .modal-body {
+          h6 {
+            text-decoration: underline;
+          }
           .people {
             display: flex;
             justify-content: space-between;
@@ -676,7 +678,7 @@ body {
                 width: 50px;
                 height: 50px;
               }
-  
+
               div {
                 p {
                   font-size: small;
@@ -684,13 +686,13 @@ body {
                 }
               }
             }
-  
+
             button {
               font-size: small;
             }
           }
-          .img-container{
-            img{
+          .img-container {
+            img {
               max-height: 65vh;
               min-width: 100%;
             }
@@ -865,13 +867,13 @@ body {
           }
         }
       }
-      .services-container{
-        .service{
+      .services-container {
+        .service {
           width: 31%;
         }
-        .service-modal{
+        .service-modal {
           margin-top: 2.5vh;
-          .modal-dialog{
+          .modal-dialog {
             max-width: 95vw;
             margin: 1rem;
           }
@@ -885,8 +887,32 @@ body {
   }
 }
 
-@media (max-width: 768px){
-  
+@media (max-width: 768px) {
+  .ez-body {
+    #ez-body__center-content {
+      .services-container {
+        .service {
+          width: 31%;
+        }
+        .service-modal {
+          .modal-body {
+            display: flex;
+            flex-direction: column-reverse;
+            .img-container {
+              max-width: 100%;
+              img {
+                max-height: 50vh;
+              }
+            }
+            .description {
+              display: flex;
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
