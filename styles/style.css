@@ -283,6 +283,27 @@ body {
   right: 1vw;
 }
 
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img .options {
+  position: absolute;
+  top: 1.5vh;
+  right: 3.5vw;
+  z-index: 999;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img .story-options {
+  position: absolute;
+  top: 2.5vh;
+  right: 4vw;
+  display: none;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-img .story-options ul {
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .ez-body #ez-body__center-content .stories .show-story-modal .story-content-img img {
   border-radius: 0;
 }
@@ -307,6 +328,26 @@ body {
   right: 1vw;
 }
 
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-text .options {
+  position: absolute;
+  top: 1.5vh;
+  right: 3.5vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-text .story-options {
+  position: absolute;
+  top: 2.5vh;
+  right: 4vw;
+  display: none;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-text .story-options ul {
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio {
   position: relative;
   max-width: 90vw;
@@ -318,6 +359,26 @@ body {
   position: absolute;
   top: 1vh;
   right: 1vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio .options {
+  position: absolute;
+  top: 1.5vh;
+  right: 3.5vw;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio .story-options {
+  position: absolute;
+  top: 2.5vh;
+  right: .5vw;
+  display: none;
+}
+
+.ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio .story-options ul {
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .ez-body #ez-body__center-content .stories .show-story-modal .story-content-vedio img {

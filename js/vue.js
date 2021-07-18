@@ -1,3 +1,7 @@
+let toggleStoryOptions = (id) => {
+  if ($('.story-options-' + id).css('display') == 'block') $('.story-options-' + id).css('display', 'none')
+  else $('.story-options-' + id).css('display', 'block')
+}
 
 let toggleCommentOptions = (id) => {
   if ($('.comment-options-' + id).css('display') == 'block') $('.comment-options-' + id).css('display', 'none')
