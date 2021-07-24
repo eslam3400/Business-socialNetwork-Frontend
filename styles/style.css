@@ -521,6 +521,14 @@ body {
   height: 50px;
 }
 
+.ez-body #ez-body__center-content .post-container .post-comment-list .comment .owner-name .comment-actions {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .ez-body #ez-body__center-content .post-container .post-comment-list .comment b {
   color: black;
 }

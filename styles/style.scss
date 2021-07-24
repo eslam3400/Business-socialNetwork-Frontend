@@ -535,6 +535,14 @@ body {
             }
           }
 
+          .owner-name{
+            .comment-actions{
+              padding: 0;
+              list-style: none;
+              display: flex;
+            }
+          }
+
           b {
             color: black;
           }
