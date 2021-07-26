@@ -287,106 +287,24 @@ body {
 
         .modal-body {
           padding: 0;
-        }
-        .story-content-img {
-          position: relative;
-          max-width: 90vw;
-          max-height: 80vh;
-          button {
-            position: absolute;
-            top: 1vh;
-            right: 1vw;
-          }
-          .options {
-            position: absolute;
-            top: 1.5vh;
-            right: 3.5vw;
-            z-index: 999;
-          }
-          .story-options{
-            position: absolute;
+          .carousel-control-next,
+          .carousel-control-prev {
             top: 2.5vh;
-            right: 4vw;
-            display: none;
-            ul{
-              list-style: none;
-              background-color: white;
-              border-radius: 5px;
-              padding: 5px;
-            }
-          }
-          img {
-            border-radius: 0;
-          }
-          p {
-            position: absolute;
-            bottom: 1vh;
-            color: #fff;
           }
         }
-        .story-content-text {
-          position: relative;
-          max-width: 90vw;
-          max-height: 80vh;
-          background-image: url("https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-          background-position: center;
-          button {
-            position: absolute;
-            top: 1vh;
-            right: 1vw;
+      }
+      .show-story-views-modal {
+        .people-info {
+          .profile-figure {
+            width: 50px;
+            height: 50px;
           }
-          .options {
-            position: absolute;
-            top: 1.5vh;
-            right: 3.5vw;
-          }
-          .story-options{
-            position: absolute;
-            top: 2.5vh;
-            right: 4vw;
-            display: none;
-            ul{
-              list-style: none;
-              background-color: white;
-              border-radius: 5px;
-              padding: 5px;
+
+          div {
+            p {
+              font-size: small;
+              margin-bottom: 5px;
             }
-          }
-        }
-        .story-content-vedio {
-          position: relative;
-          max-width: 90vw;
-          max-height: 80vh;
-          button {
-            z-index: 99;
-            position: absolute;
-            top: 1vh;
-            right: 1vw;
-          }
-          .options {
-            position: absolute;
-            top: 1.5vh;
-            right: 3.5vw;
-          }
-          .story-options{
-            position: absolute;
-            top: 2.5vh;
-            right: .5vw;
-            display: none;
-            ul{
-              list-style: none;
-              background-color: white;
-              border-radius: 5px;
-              padding: 5px;
-            }
-          }
-          img {
-            border-radius: 0;
-          }
-          p {
-            position: absolute;
-            bottom: 1vh;
-            color: #fff;
           }
         }
       }
@@ -535,8 +453,8 @@ body {
             }
           }
 
-          .owner-name{
-            .comment-actions{
+          .owner-name {
+            .comment-actions {
               padding: 0;
               list-style: none;
               display: flex;
