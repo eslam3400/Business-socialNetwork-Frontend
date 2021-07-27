@@ -272,7 +272,20 @@ body {
 
       .story {
         margin: 8px;
+        position: relative;
+        .owner-info {
+          position: absolute;
+          top: 0.5vh;
+          left: 0.5vw;
+          .profile-figure {
+            width: 35px;
+            height: 35px;
+          }
 
+          p {
+            font-size: small;
+          }
+        }
         img {
           border-radius: 10px;
           width: 12vw;

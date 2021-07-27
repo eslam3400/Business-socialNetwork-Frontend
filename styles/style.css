@@ -255,6 +255,22 @@ body {
 
 .ez-body #ez-body__center-content .stories .story {
   margin: 8px;
+  position: relative;
+}
+
+.ez-body #ez-body__center-content .stories .story .owner-info {
+  position: absolute;
+  top: 0.5vh;
+  left: 0.5vw;
+}
+
+.ez-body #ez-body__center-content .stories .story .owner-info .profile-figure {
+  width: 35px;
+  height: 35px;
+}
+
+.ez-body #ez-body__center-content .stories .story .owner-info p {
+  font-size: small;
 }
 
 .ez-body #ez-body__center-content .stories .story img {
