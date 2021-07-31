@@ -351,20 +351,6 @@ body {
   border-radius: 10px;
 }
 
-.ez-body #ez-body__center-content .post-container .shared-post {
-  border: antiquewhite 1px solid;
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
-  -webkit-transition: unset;
-  transition: unset;
-  border-radius: 10px;
-}
-
-.ez-body #ez-body__center-content .post-container .shared-post .post-owner .owner-img img {
-  width: 70px;
-  height: 70px;
-}
-
 .ez-body #ez-body__center-content .post-container .post-owner {
   position: relative;
 }
@@ -551,6 +537,20 @@ body {
 
 .ez-body #ez-body__center-content .post-container .post-edit-modal .model-content {
   border-radius: 100px !important;
+}
+
+.ez-body #ez-body__center-content .shared-post {
+  border: antiquewhite 1px solid;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-transition: unset;
+  transition: unset;
+  border-radius: 10px;
+}
+
+.ez-body #ez-body__center-content .shared-post .post-owner .owner-img img {
+  width: 70px;
+  height: 70px;
 }
 
 .ez-body #ez-body__center-content .profile-left .container0 {
