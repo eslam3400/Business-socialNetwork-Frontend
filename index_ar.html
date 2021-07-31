@@ -180,7 +180,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form action="" class="container w-75" enctype="multipart/form-data">
+                    <form action="" class="container w-75" dir="rtl" enctype="multipart/form-data">
                       <!-- Story Text -->
                       <div class="post-desc d-flex justify-content-center mt-2">
                         <textarea name="story-text" id="story-text" cols="200" rows="4"
@@ -211,10 +211,10 @@
           <div class="people-stories">
             <div class="story" data-toggle="modal" data-target="#showStoryModal-1">
               <div class="owner-info d-flex align-items-center">
+                <p class="mb-0 p-2"><b>Eslam Magdy</b></p>
                 <img class="profile-figure rounded-circle"
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
                   alt="User Profile Pic">
-                <p class="mb-0 p-2"><b>Eslam Magdy</b></p>
               </div>
               <img
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
@@ -559,18 +559,18 @@
         </div>
         <div id="app">
           <div class="post-container bg-white mt-3 p-3" id="post-1">
-            <div class="post-owner d-flex align-items-center">
+            <div class="post-owner d-flex align-items-center flex-row-reverse">
               <div class="owner-img">
                 <img src="img.jpg" class="rounded-circle" />
               </div>
-              <div class="owner-name pl-3">
-                <a href="https://google.com"><b>Eslam Magdy</b></a><br />
+              <div class="owner-name pr-3 d-flex flex-column justify-content-center align-items-center">
+                <a href="https://google.com"><b>Eslam Magdy</b></a>
                 <span>2021-7-6</span>
               </div>
               <!-- Post options -->
               <div class="post-options post-options-1">
                 <ul class="options">
-                  <li data-toggle="modal" data-target="#advertiseModal">
+                  <li data-toggle="modal" data-target="#advertiseModal-1">
                     Advertise
                   </li>
                   <li>Save Post</li>
@@ -583,7 +583,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="post-option ml-auto pr-3" onclick="toggleOptions(1)">
+              <div class="post-option mr-auto pl-3" onclick="toggleOptions(1)">
                 <i class="fas fa-ellipsis-v"></i>
               </div>
             </div>
@@ -703,7 +703,7 @@
                 </div>
               </div>
             </div>
-            <div class="post-statistics mt-3 d-flex">
+            <div class="post-statistics mt-3 d-flex flex-row-reverse">
               <div class="likes">
                 <!-- if post is liked by user -->
                 <!-- <div><i class="fas fa-thumbs-up"></i><span> 20</span></div> -->
@@ -711,24 +711,26 @@
                 <div><i class="far fa-thumbs-up"></i><span> 19</span></div>
               </div>
               <div class="comments" onclick="toggleComments(1)">
-                <i class="far fa-comment ml-3"></i><span> 50</span>
+                <i class="far fa-comment"></i><span class="mr-3"> 50</span>
               </div>
               <div class="shares">
-                <i class="fas fa-share ml-3"></i><span> 5</span>
+                <i class="fas fa-share"></i><span class="mr-3"> 5</span>
               </div>
             </div>
             <div class="post-comment-list post-comment-list-1 mt-2">
-              <div class="hide-commnet-list d-flex flex-row-reverse">
+              <div class="hide-commnet-list">
                 <span onclick="toggleComments(1)"><i class="fas fa-chevron-up"></i> Hide</span>
               </div>
-              <div class="comment d-flex justify-content-between">
-                <div class="comment-owner d-flex p-2 w-100">
-                  <div class="owner-img">
+              <div class="comment d-flex flex-row-reverse justify-content-between">
+                <div class="comment-owner flex-row-reverse d-flex p-2 w-100">
+                  <div class="owner-img ml-2">
                     <img src="img.jpg" class="rounded-circle" />
                   </div>
                   <div class="owner-name pl-3 w-100">
-                    <a href="comment.userProfile" class="mb-0"><b>Eslam Magdy</b></a>
-                    <p class="comment-content mb-0">My First Comment :D</p>
+                    <div class="d-flex flex-column">
+                      <a href="comment.userProfile" class="mb-0 ml-auto"><b>Eslam Magdy</b></a>
+                      <p class="comment-content mb-0 ml-auto">My First Comment :D</p>
+                    </div>
                     <!-- attatched img -->
                     <!-- <img src="img.jpg" class="w-100 pt-3"> -->
                     <!-- attatched vedio -->
@@ -736,19 +738,21 @@
                       <source src="VID.mp4" type="video/mp4" />
                     </video>
                     <ul class="comment-actions mt-1">
-                      <li class="text-primary">Like</li>
+                      <li class="text-primary ml-auto">Like</li>
                       <li class="ml-3 text-primary">Replay</lic>
                     </ul>
                     <div class="replays comment-1-replays">
                       <div class="mt-2">
-                        <div class="comment d-flex justify-content-between">
-                          <div class="comment-owner d-flex p-2">
+                        <div class="comment d-flex justify-content-between flex-row-reverse">
+                          <div class="comment-owner d-flex flex-row-reverse p-2">
                             <div class="owner-img">
-                              <img src="img.jpg" class="rounded-circle" />
+                              <img src="img.jpg" class="rounded-circle ml-2" />
                             </div>
                             <div class="owner-name pl-3">
-                              <a href="comment.userProfile" class="mb-0"><b>Eslam Magdy</b></a>
-                              <p class="comment-content mb-0">My First Comment :D</p>
+                              <div class="d-flex flex-column">
+                                <a href="comment.userProfile" class="mb-0 ml-auto"><b>Eslam Magdy</b></a>
+                                <p class="comment-content mb-0 ml-auto">My First Comment :D</p>
+                              </div>
                               <!-- attatched img -->
                               <!-- <img src="img.jpg" class="w-100 pt-3"> -->
                               <!-- attatched vedio -->
@@ -756,7 +760,7 @@
                                   <source src="VID.mp4" type="video/mp4" />
                                 </video> -->
                               <ul class="comment-actions mt-1">
-                                <li class="text-primary">Like</li>
+                                <li class="text-primary ml-auto">Like</li>
                                 <li class="ml-3 text-primary">Replay</lic>
                               </ul>
                             </div>
@@ -766,16 +770,16 @@
                               <li>Report This Comment</li>
                             </ul>
                           </div>
-                          <div class="comment-option ml-auto pr-3 pt-2">
+                          <div class="comment-option mr-auto pl-3 pl-2">
                             <i class="fas fa-ellipsis-v" onclick="toggleCommentOptions(2)"></i>
                           </div>
                         </div>
                         <!-- if there is multi comments then take uncomment hr -->
                         <!-- <hr class="m-0" /> -->
                       </div>
-                      <form class="add-commnet mt-2 d-flex align-items-center">
-                        <input class="w-100 pl-2" type="text" name="comment" placeholder="Add Your Commnet" />
-                        <div class="d-flex align-items-center pr-3">
+                      <form class="add-commnet mt-2 d-flex align-items-center flex-row-reverse">
+                        <input class="w-100 pr-2" dir="rtl" type="text" name="comment" placeholder="Add Your Commnet" />
+                        <div class="d-flex align-items-center pl-3">
                           <i class="fas fa-paperclip" onclick="commentAttachClick(2)"></i>
                           <input type="file" id="comment-attach-2" name="img" accept="image/*" />
                         </div>
@@ -788,22 +792,22 @@
                     <li>Report This Comment</li>
                   </ul>
                 </div>
-                <div class="comment-option ml-auto pr-3 pt-2">
+                <div class="comment-option ml-auto pl-3 pl-2">
                   <i class="fas fa-ellipsis-v" onclick="toggleCommentOptions(1)"></i>
                 </div>
               </div>
               <!-- if there is multi comments then take uncomment hr -->
               <!-- <hr class="m-0" /> -->
             </div>
-            <form class="add-commnet mt-2 d-flex align-items-center">
-              <input class="w-100 pl-2" type="text" name="comment" placeholder="Add Your Commnet" />
-              <div class="d-flex align-items-center pr-3">
+            <form class="add-commnet mt-2 d-flex align-items-center flex-row-reverse">
+              <input class="w-100 pr-2" dir="rtl" type="text" name="comment" placeholder="Add Your Commnet" />
+              <div class="d-flex align-items-center pl-3">
                 <i class="fas fa-paperclip" onclick="commentAttachClick(1)"></i>
                 <input type="file" id="comment-attach-1" name="img" accept="image/*" />
               </div>
             </form>
             <div class="post-advertise-modal">
-              <div class="modal fade" id="advertiseModal" tabindex="-1" aria-hidden="true">
+              <div class="modal fade" id="advertiseModal-1" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog" style="margin-top: 7vh">
                   <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
@@ -816,36 +820,40 @@
                       </button>
                     </div>
                     <div class="modal-body pl-5 pr-5">
-                      <form action="" class="container">
-                        <p>Select Duration:</p>
-                        <div class="form-group form-check mb-1 p-1">
+                      <form action="" class="container" dir="rtl">
+                        <div class="d-flex justify-content-start">
+                          <p>Select Duration:</p>
+                        </div>
+                        <div class="form-group form-check mb-1 p-1 d-flex justify-content-start">
                           <input type="radio" name="duration" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">3 days</label>
+                          <label class="form-check-label pr-4" for="exampleCheck1">3 days</label>
                         </div>
                         <hr class="m-1" />
-                        <div class="form-group form-check mb-1 p-1">
+                        <div class="form-group form-check mb-1 p-1 d-flex justify-content-start">
                           <input type="radio" name="duration" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">5 days</label>
+                          <label class="form-check-label pr-4" for="exampleCheck1">5 days</label>
                         </div>
                         <hr class="m-1" />
-                        <div class="form-group form-check p-1">
+                        <div class="form-group form-check p-1 d-flex justify-content-start">
                           <input type="radio" name="duration" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">7 days</label>
+                          <label class="form-check-label pr-4" for="exampleCheck1">7 days</label>
                         </div>
-                        <p>Select Audience:</p>
-                        <div class="form-group form-check mb-1 p-1">
-                          <input type="radio" name="audience" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">From 100 To 1000</label>
+                        <div class="d-flex justify-content-start">
+                          <p>Select Audience:</p>
                         </div>
-                        <hr class="m-1" />
-                        <div class="form-group form-check mb-1 p-1">
+                        <div class="form-group form-check mb-1 p-1 d-flex justify-content-start">
                           <input type="radio" name="audience" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">From 1000 To 2000</label>
+                          <label class="form-check-label pr-4" for="exampleCheck1">From 100 To 1000</label>
                         </div>
                         <hr class="m-1" />
-                        <div class="form-group form-check p-1">
+                        <div class="form-group form-check mb-1 p-1 d-flex justify-content-start">
                           <input type="radio" name="audience" class="form-check-input" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">From 2000 To 5000</label>
+                          <label class="form-check-label pr-4" for="exampleCheck1">From 1000 To 2000</label>
+                        </div>
+                        <hr class="m-1" />
+                        <div class="form-group form-check p-1 d-flex justify-content-start">
+                          <input type="radio" name="audience" class="form-check-input" id="exampleCheck1" />
+                          <label class="form-check-label pr-4" for="exampleCheck1">From 2000 To 5000</label>
                         </div>
                         <div class="form-group d-flex justify-content-between p-1">
                           <label for="exampleInputEmail1">Target Audience:</label>
@@ -902,15 +910,17 @@
                       <form action="" class="container" enctype="multipart/form-data">
                         <!-- Select post Privacy -->
                         <div class="
-                                post-privacy
-                                d-flex
-                                justify-content-between
-                                align-items-center
-                                m-auto
-                                w-75 p-1
-                              ">
+                    post-privacy
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    flex-row-reverse
+                    m-auto
+                    w-75
+                    p-2
+                  ">
                           <label for="cars">Choose Post Privacy:</label>
-                          <select id="post-privacy" name="privacy">
+                          <select dir="rtl" id="post-privacy" name="privacy">
                             <option value="volvo">Volvo</option>
                             <option value="saab">Saab</option>
                             <option value="fiat">Fiat</option>
@@ -920,15 +930,17 @@
                         <div id="post-type-service-content">
                           <!-- Select Service Category -->
                           <div class="
-                                  post-category
-                                  d-flex
-                                  justify-content-between
-                                  align-items-center
-                                  m-auto
-                                  w-75 p-1
-                                ">
+                      post-category
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      flex-row-reverse
+                      m-auto
+                      w-75
+                      p-2
+                    ">
                             <label for="cars">Choose A Category:</label>
-                            <select id="post-category" name="category">
+                            <select dir="rtl" id="post-category" name="category">
                               <option value="volvo">Volvo</option>
                               <option value="saab">Saab</option>
                               <option value="fiat">Fiat</option>
@@ -936,34 +948,22 @@
                             </select>
                           </div>
                           <!-- Select Service Price -->
-                          <div class="
-                                  post-category
-                                  d-flex
-                                  justify-content-between
-                                  align-items-center
-                                  m-auto
-                                  w-75 p-1
-                                ">
-                            <input class="w-100 border" type="number" placeholder="Service Price $" />
+                          <div class="post-category d-flex justify-content-between align-items-center m-auto w-75">
+                            <input class="w-100 border" type="number" dir="rtl" placeholder="Service Price $" />
                           </div>
                         </div>
                         <!-- Post Desc -->
-                        <div class="post-desc d-flex justify-content-center mt-2 p-1">
-                          <textarea class="w-75" name="post-text" id="post-text" cols="200" rows="4"
-                            placeholder="Start Typing..." :value="post.text"></textarea>
+                        <div class="post-desc d-flex justify-content-center mt-2">
+                          <textarea dir="rtl" class="w-75 p-2" name="post-text" id="post-text" cols="200" rows="4"
+                            placeholder="Post Description..."></textarea>
                         </div>
                         <!-- Post Images -->
-                        <div class="post-desc d-flex justify-content-center mt-2 p-1">
+                        <div class="post-desc d-flex justify-content-center mt-2">
                           <input class="form-control w-75 mt-2" type="file" name="imgs" id="imgs" accept="image/*"
                             multiple />
                         </div>
                         <!-- Add Post Btn -->
-                        <div class="
-                                post-add-btn
-                                d-flex
-                                justify-content-center
-                                mt-4
-                              ">
+                        <div class="post-add-btn d-flex justify-content-center mt-4">
                           <button type="button" class="btn btn-warning btn-block w-75" data-dismiss="modal">
                             Save
                           </button>

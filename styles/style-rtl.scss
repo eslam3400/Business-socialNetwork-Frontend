@@ -9,9 +9,47 @@
         text-align: right;
       }
     }
+    .stories {
+      .story {
+        .owner-info {
+          left: unset;
+          right: 0.5vw;
+        }
+      }
+    }
     .add-post {
       input {
         text-align: right;
+      }
+    }
+    .post-container {
+      .post-owner {
+        .post-options {
+          left: 1.5vw;
+          right: unset;
+        }
+      }
+      .post-comment-list {
+        .comment {
+          .comment-options {
+            right: unset;
+            left: 1.5vw;
+          }
+        }
+      }
+      .add-commnet {
+        input {
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+        div {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+        }
       }
     }
   }
