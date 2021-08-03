@@ -259,6 +259,7 @@ body {
 }
 
 .ez-body #ez-body__center-content .stories .story .owner-info {
+  z-index: 99;
   position: absolute;
   top: 0.5vh;
   left: 0.5vw;
@@ -267,6 +268,7 @@ body {
 .ez-body #ez-body__center-content .stories .story .owner-info .profile-figure {
   width: 35px;
   height: 35px;
+  opacity: 1;
 }
 
 .ez-body #ez-body__center-content .stories .story .owner-info p {
@@ -277,6 +279,7 @@ body {
   border-radius: 10px;
   width: 12vw;
   height: 25vh;
+  opacity: 0.7;
 }
 
 .ez-body #ez-body__center-content .stories .show-story-modal .modal-dialog {
