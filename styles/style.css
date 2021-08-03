@@ -539,6 +539,16 @@ body {
   border-radius: 100px !important;
 }
 
+.ez-body #ez-body__center-content .post-container .likes-modal .people-info .profile-figure {
+  width: 50px;
+  height: 50px;
+}
+
+.ez-body #ez-body__center-content .post-container .likes-modal .people-info div p {
+  font-size: small;
+  margin-bottom: 5px;
+}
+
 .ez-body #ez-body__center-content .shared-post {
   border: antiquewhite 1px solid;
   -webkit-box-shadow: unset;

@@ -710,7 +710,8 @@ Hello World My Name Is Eslam Magdy :D</pre>
                 <!-- if post is liked by user -->
                 <!-- <div><i class="fas fa-thumbs-up"></i><span> 20</span></div> -->
                 <!-- if post isn't liked by user -->
-                <div><i class="far fa-thumbs-up"></i><span> 19</span></div>
+                <div><i class="far fa-thumbs-up"></i><span data-toggle="modal" data-target="#likes-modal-1"> 19</span>
+                </div>
               </div>
               <div class="comments" onclick="toggleComments(1)">
                 <i class="far fa-comment ml-3"></i><span> 50</span>
@@ -1030,6 +1031,55 @@ Hello World My Name Is Eslam Magdy :D</pre>
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="sr-only">Next</span>
                         </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="likes-modal">
+              <div class="modal fade" id="likes-modal-1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog" style="margin-top: 10vh;">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                      <span></span>
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Reactions
+                      </h5>
+                      <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="services-controller m-3 text-left">
+                        <button class="btn btn-light rounded-5 filter-button ez-active" data-filter="all">
+                          All
+                        </button>
+                        <button class="btn btn btn-light rounded-5 filter-button" data-filter="first">
+                          First
+                        </button>
+                        <button class="btn btn btn-light filter-button" data-filter="second">
+                          Second
+                        </button>
+                      </div>
+                      <div class="likes-container mt-3">
+                        <div class="filter first">
+                          <div class="people-info d-flex align-items-center">
+                            <img class="profile-figure rounded-circle"
+                              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                              alt="User Profile Pic">
+                            <p class="mb-0 ml-3"><b>Eslam Magdy</b></p>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="filter second">
+                          <div class="people-info d-flex align-items-center">
+                            <img class="profile-figure rounded-circle"
+                              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                              alt="User Profile Pic">
+                            <p class="mb-0 ml-3"><b>Eslam Magdy</b></p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
