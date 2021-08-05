@@ -532,6 +532,10 @@ body {
   padding-left: 1vw;
 }
 
+.ez-body #ez-body__center-content .post-container .post-edit-modal input[type="checkbox"] {
+  height: unset;
+}
+
 .ez-body #ez-body__center-content .post-container .post-edit-modal #post-category,
 .ez-body #ez-body__center-content .post-container .post-edit-modal #post-privacy,
 .ez-body #ez-body__center-content .post-container .post-edit-modal #post-text {

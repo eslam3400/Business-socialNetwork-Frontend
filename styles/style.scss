@@ -565,6 +565,10 @@ body {
           padding-left: 1vw;
         }
 
+        input[type="checkbox"] {
+          height: unset;
+        }
+
         #post-category,
         #post-privacy,
         #post-text {
