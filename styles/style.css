@@ -4,8 +4,6 @@ body {
 
 .ez-navbar {
   background-color: #fcbc22;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .ez-navbar .navbar-brand {
@@ -15,6 +13,10 @@ body {
 .ez-navbar .right-side {
   position: absolute;
   right: 3vw;
+}
+
+.ez-navbar .right-side .dropdown-toggle::after {
+  content: unset;
 }
 
 .ez-navbar .right-side a {
@@ -418,11 +420,11 @@ body {
 }
 
 .ez-body #ez-body__center-content .post-container .post-desc .more-media .overlay {
-  width: 99%;
-  margin-left: 1%;
-  height: 98%;
-  margin-top: 2%;
   position: absolute;
+  width: 99%;
+  height: 99%;
+  top: 0.25rem;
+  left: 0.25rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
 

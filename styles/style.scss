@@ -38,8 +38,6 @@ body {
 
 .ez-navbar {
   background-color: $yellow-bg;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 
   .navbar-brand {
     font-size: 26px;
@@ -48,7 +46,9 @@ body {
   .right-side {
     position: absolute;
     right: 3vw;
-
+    .dropdown-toggle::after {
+      content: unset;
+    }
     a {
       color: white;
     }
@@ -442,11 +442,11 @@ body {
         .more-media {
           position: relative;
           .overlay {
-            width: 99%;
-            margin-left: 1%;
-            height: 98%;
-            margin-top: 2%;
             position: absolute;
+            width: 99%;
+            height: 99%;
+            top: 0.25rem;
+            left: 0.25rem;
             background-color: rgba(0, 0, 0, 0.5);
           }
           p {
