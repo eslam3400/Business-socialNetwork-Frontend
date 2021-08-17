@@ -702,6 +702,20 @@ body {
   padding-right: 0;
 }
 
+.ez-body .profile-center-content #settingsModal .profile-pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ez-body .profile-center-content #settingsModal .profile-pic label {
+  margin-left: -4%;
+}
+
+.ez-body .profile-center-content #settingsModal .upload-cover input {
+  width: 70%;
+  border: 0;
+}
+
 .ez-body .profile-center-content .people {
   display: -webkit-box;
   display: -ms-flexbox;

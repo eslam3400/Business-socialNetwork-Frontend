@@ -751,6 +751,23 @@ body {
   .profile-center-content {
     padding-right: 0;
 
+    #settingsModal {
+      .profile-pic {
+        img {
+          object-fit: cover;
+        }
+        label {
+          margin-left: -4%;
+        }
+      }
+      .upload-cover {
+        input {
+          width: 70%;
+          border: 0;
+        }
+      }
+    }
+
     .people {
       display: flex;
       justify-content: space-between;
