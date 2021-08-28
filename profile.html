@@ -105,13 +105,31 @@
                   </div>
                 </div>
               </li>
-              <li class="mt-3 text-center last-li">
-                <i><img src="icons/headphones.png" width="20" height="20"></i>
-                <i><img src="icons/video-player.png" width="20" height="20"></i>
-                <i><img src="icons/photo.png" width="20" height="20"></i>
-                <i><img src="icons/dumbbell.png" width="20" height="20"></i>
-                <i><img src="icons/mentor.png" width="20" height="20"></i>
-                <i><img src="icons/joystick.png" width="20" height="20"></i>
+              <li class="mt-3 text-center last-li d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src=" icons/headphones.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/video-player.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/photo.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/dumbbell.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/mentor.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/joystick.png" width="20" height="20">
+                  <span>test</span>
+                </div>
               </li>
             </ul>
           </li>
@@ -266,19 +284,37 @@
                   </div>
                 </div>
               </li>
-              <li class="mt-3 text-center last-li d-flex justify-content-between">
-                <i><img src="icons/headphones.png" width="35" height="35"></i>
-                <i><img src="icons/video-player.png" width="35" height="35"></i>
-                <i><img src="icons/photo.png" width="35" height="35"></i>
-                <i><img src="icons/dumbbell.png" width="35" height="35"></i>
-                <i><img src="icons/mentor.png" width="35" height="35"></i>
-                <i><img src="icons/joystick.png" width="35" height="35"></i>
+              <li class="mt-3 text-center last-li d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src=" icons/headphones.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/video-player.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/photo.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/dumbbell.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/mentor.png" width="20" height="20">
+                  <span>test</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                  <img src="icons/joystick.png" width="20" height="20">
+                  <span>test</span>
+                </div>
               </li>
             </ul>
           </div>
           <!-- Settings Modal -->
           <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true" style="margin-top: 2vh;">
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header" style="border: none;">
@@ -289,16 +325,19 @@
                 </div>
                 <div class="modal-body">
                   <form>
+                    <div class="cover-pic w-100">
+                      <img class="w-100"
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                        alt="User Profile Pic" height="150" />
+                      <label for="upload-cover-pic"><i class="fas fa-camera"></i></label>
+                      <input class="d-none" type="file" name="cover-pic" id="upload-cover-pic">
+                    </div>
                     <div class="profile-pic d-flex justify-content-center align-items-end w-100 pb-4">
                       <img class="profile-figure rounded-circle"
                         src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                         alt="User Profile Pic" width="150" height="150" />
                       <label for="upload-profile-pic"><i class="fas fa-camera"></i></label>
                       <input class="d-none" type="file" name="profile-pic" id="upload-profile-pic">
-                    </div>
-                    <div class="form-group upload-cover d-flex justify-content-between align-items-center">
-                      <label for="">Uplaod cover pic</label>
-                      <input type="file" name="cover-pic" class="form-control" placeholder="Name">
                     </div>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Name">

@@ -753,8 +753,10 @@ body {
 
     #settingsModal {
       .profile-pic {
+        margin-top: -20%;
         img {
           object-fit: cover;
+          border: 5px solid white;
         }
         label {
           margin-left: -4%;
